@@ -1,0 +1,16 @@
+<h1>New Dojo</h1>
+<form action="/dojos/<%= @dojo.id %>" method="post">
+    <input type="hidden" name="_method" value="patch">
+<%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
+Branch: <input type="text" name="branch" value="<%=@dojo.branch%>">
+<br>
+Street: <input type="text" name="street" value="<%=@dojo.street%>">
+<br>
+City: <input type="text" name="city" value="<%=@dojo.city%>">
+<br>
+State: <input type="text" name="state" value="<%=@dojo.state%>">
+<br>
+<input type="submit" value="Submit">
+</form>
+<br>
+<a href="/dojos">Go Back</a>

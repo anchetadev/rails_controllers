@@ -1,0 +1,5 @@
+<form method="POST">
+<%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
+name: <input type="text" value="<%= @person.name %>" name="name">
+<input type="submit" value=submit>
+</form>

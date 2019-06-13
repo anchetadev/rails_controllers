@@ -1,0 +1,31 @@
+<% content_for :left_column do %>
+<h1>All Users</h1>
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Favorite Language</th>
+        </tr>
+        <% @users.each do |u| %>
+        <tr>
+            <td><%= u.first_name %></td>
+            <td><%= u.last_name %></td>
+            <td><%= u.fav %></td>
+        </tr>
+        <% end %>
+    </table> 
+<%end%>
+<% content_for :right_column do %>
+    <h1>New User</h1>
+    First Name: <input type="text" name="first_name">
+    <br>
+    Last Name: <input type="text" name="last_name">
+    <br>
+    Favorite Language: <input type="text" name="fav">
+    <br>
+    <input type="submit" value="Submit">
+    <button class="btn btn-default"><a href="/posts">All Posts</a></button>
+    
+<% end %>
+
+

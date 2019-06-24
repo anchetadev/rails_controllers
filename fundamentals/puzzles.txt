@@ -1,0 +1,56 @@
+arr = [3,5,1,2,7,9,8,13,25,32]
+
+sum=0
+arr.each do |i|
+    sum += i
+end
+puts sum
+
+arr.reject { |num| num<10}
+puts arr
+
+names = ["John", "KB", "Oliver", "Cory", "Matthew", "Christopher"]
+names.shuffle
+
+def five names
+    long = []
+    names.each do |n|
+        long.push(n) unless n.length<5
+    end
+    return long
+end
+
+alph = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+alph.shuffle!
+puts alph[0]
+if alph[0] == 'a' || 'e' || 'i' || 'o' || 'u'
+    puts "vowel"
+end
+puts alph[-1]
+
+def random
+    nums =[]
+    10.times do
+        nums.push(55+rand(100))
+    end
+    nums.sort
+    puts nums
+    puts nums.min
+    puts nums.max
+end
+
+string = ""
+5.times do
+    string += (65+rand(26)).chr
+end
+puts string
+
+new_str = ""
+str_arr=[]
+10.times do
+    5.times do 
+        new_str += (65+rand(26)).chr
+    end
+    str_arr.push(new_str)
+    new_str = ""
+end

@@ -1,0 +1,98 @@
+for i in 1..255
+    puts "#{i}"
+end
+
+for i in 1..255
+    puts "#{i}" unless i % 2 == 0
+end
+
+sum = 0
+for i in 1..255
+    sum += i
+    puts "new number: #{i} #{sum}"
+end
+
+a = [1,2,3,4,5]
+
+a.each {|i| puts i}
+
+puts a.max
+
+def odd_nums y
+    for i in 1..255 
+        y.push(i) unless i % 2 == 0
+    end
+    puts y
+end
+odd_nums
+
+counter = 0
+def greater_y arr
+    y=3
+    arr.each do |i| 
+        counter += 1 unless y<i
+    end
+    puts counter
+end
+
+def greater_y arr
+    y=3
+    for i in arr
+        unless i>y
+            count +1
+        end
+    end
+    puts count
+end
+
+def square 
+    arr = [1,2,3]
+    puts arr
+    arr.each do |item|
+        arr[item] = item * item
+    end
+    return arr
+end
+
+def square 
+    arr = [1,2,3]
+    puts arr
+    arr.each {|item|
+        arr[item] = item * item
+    }
+    return arr
+end
+
+def elim_negs x
+    x.each_index do |i|
+        x[i] = 0 unless x[i] > 0
+    end
+end
+
+def values x
+    max = x.max
+    min = x.min
+    sum = 0
+    names.each do |item|
+        sum += item
+    end
+    puts max
+    put min
+    puts sum/x.length
+    my_hash = {
+        :maximum => max,
+        :minimum => min,
+        :avg => sum/x.length
+    }
+    print my_hash
+end
+
+def shift arr
+    arr.shift
+    arr.push(0)
+    return arr
+end
+
+def num_string arr  
+    arr.each do |i|
+        arr[i] = "Dojo" unless arr[i] > 0

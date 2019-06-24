@@ -1,0 +1,122 @@
+
+vagrant@vagrant-ubuntu-trusty-64:~$ irb
+2.3.1 :001 > a = [1,2,3,4,5,6,7]
+ => [1, 2, 3, 4, 5, 6, 7]
+2.3.1 :002 >
+2.3.1 :003 >   puts a.reverse
+7
+6
+5
+4
+3
+2
+1
+ => nil
+2.3.1 :004 > puts a.length
+7
+ => nil
+2.3.1 :005 > puts a.shuffle
+2
+5
+4
+7
+6
+3
+1
+ => nil
+2.3.1 :006 > puts a.sort
+1
+2
+3
+4
+5
+6
+7
+ => nil
+2.3.1 :007 > puts a.slice
+ArgumentError: wrong number of arguments (given 0, expected 1..2)
+        from (irb):7:in `slice'
+        from (irb):7
+        from /home/vagrant/.rvm/rubies/ruby-2.3.1/bin/irb:11:in `<main>'
+2.3.1 :008 > puts a.slice 1 2
+SyntaxError: (irb):8: syntax error, unexpected tINTEGER, expecting end-of-input
+        from /home/vagrant/.rvm/rubies/ruby-2.3.1/bin/irb:11:in `<main>'
+2.3.1 :009 > arr.fetch(3)
+NameError: undefined local variable or method `arr' for main:Object
+Did you mean?  Array
+        from (irb):9
+        from /home/vagrant/.rvm/rubies/ruby-2.3.1/bin/irb:11:in `<main>'
+2.3.1 :010 > ar.fetch(3)
+NameError: undefined local variable or method `ar' for main:Object
+Did you mean?  a
+        from (irb):10
+        from /home/vagrant/.rvm/rubies/ruby-2.3.1/bin/irb:11:in `<main>'
+2.3.1 :011 > a.fetch(3)
+ => 4
+2.3.1 :012 > a.at(3)
+ => 4
+2.3.1 :013 > a.delete(1)
+ => 1
+2.3.1 :014 > puts a
+2
+3
+4
+5
+6
+7
+ => nil
+2.3.1 :015 > a.join("-")
+ => "2-3-4-5-6-7"
+2.3.1 :016 > a.insert(0, "inserted")
+ => ["inserted", 2, 3, 4, 5, 6, 7]
+2.3.1 :017 > a.slice(3, 2)
+ => [4, 5]
+2.3.1 :018 > puts 1
+1
+ => nil
+2.3.1 :019 > puts a
+inserted
+2
+3
+4
+5
+6
+7
+ => nil
+2.3.1 :020 > a.values_at(1..3)
+ => [2, 3, 4]
+2.3.1 :021 >
+
+
+
+
+2.3.1 :022 > puts a .include?(3)
+true
+ => nil
+2.3.1 :023 > puts a.last
+7
+ => nil
+2.3.1 :024 > puts a.max
+ArgumentError: comparison of Fixnum with String failed
+        from (irb):24:in `each'
+        from (irb):24:in `max'
+        from (irb):24
+        from /home/vagrant/.rvm/rubies/ruby-2.3.1/bin/irb:11:in `<main>'
+2.3.1 :025 > puts a.min
+ArgumentError: comparison of Fixnum with String failed
+        from (irb):25:in `each'
+        from (irb):25:in `min'
+        from (irb):25
+        from /home/vagrant/.rvm/rubies/ruby-2.3.1/bin/irb:11:in `<main>'
+2.3.1 :026 > a.max_by{|i| i}
+ArgumentError: comparison of Fixnum with String failed
+        from (irb):26:in `each'
+        from (irb):26:in `max_by'
+        from (irb):26
+        from /home/vagrant/.rvm/rubies/ruby-2.3.1/bin/irb:11:in `<main>'
+2.3.1 :027 > b = [7,8,9,10]
+ => [7, 8, 9, 10]
+2.3.1 :028 > b.max
+ => 10
+2.3.1 :029 > b.min
+ => 7
